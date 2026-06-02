@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry Baby - Apology Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💔 I'm Sorry Baby</h1>
+            <p>The Apology Letter Generator</p>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Create Your Apology</h2>
+                <form id="apologyForm">
+                    <div class="form-group">
+                        <label for="recipientName">Their Name:</label>
+                        <input type="text" id="recipientName" placeholder="e.g., Sarah" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tone">Choose Tone:</label>
+                        <select id="tone" required>
+                            <option value="">-- Select a tone --</option>
+                            <option value="sincere">Sincere & Heartfelt</option>
+                            <option value="casual">Casual & Friendly</option>
+                            <option value="formal">Formal & Professional</option>
+                            <option value="humorous">Humorous & Light-hearted</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">What are you apologizing for?</label>
+                        <textarea id="reason" placeholder="Be specific..." rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Any additional details?</label>
+                        <textarea id="details" placeholder="Optional..." rows="2"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-generate">Generate Letter</button>
+                </form>
+            </section>
+
+            <section class="letter-section" id="letterSection" style="display: none;">
+                <h2>Your Apology Letter</h2>
+                <div class="letter-box" id="letterBox"></div>
+                <div class="button-group">
+                    <button class="btn-copy" onclick="copyToClipboard()">📋 Copy</button>
+                    <button class="btn-download" onclick="downloadLetter()">⬇️ Download</button>
+                    <button class="btn-print" onclick="window.print()">🖨️ Print</button>
+                    <button class="btn-new" onclick="location.reload()">✍️ Write Another</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Made with 💕 for sincere apologies</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
